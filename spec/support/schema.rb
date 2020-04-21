@@ -16,6 +16,15 @@ when 'pg', 'postgres', 'postgresql'
   # username: 'postgres', # Uncomment the username option if you have set one
     min_messages: 'warning'
   )
+when 'cockroachdb'
+  ActiveRecord::Base.establish_connection(
+    adapter: 'cockroachdb',
+    database: 'ransack',
+    username: 'root',
+    host: '127.0.0.1',
+    port: '26257',
+    min_messages: 'warning'
+  )
 else
   # Otherwise, assume SQLite3: `bundle exec rake spec`
   ActiveRecord::Base.establish_connection(

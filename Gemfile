@@ -30,7 +30,10 @@ else
     gem 'actionpack'
   end
 end
+
 gem 'mysql2', '~> 0.5.2'
+gem 'activerecord-cockroachdb-adapter', git: 'https://github.com/kenyonduan/activerecord-cockroachdb-adapter', ref: 'd30d260'
+
 
 group :test do
   # TestUnit was removed from Ruby 2.2 but still needed for testing Rails 3.x.
